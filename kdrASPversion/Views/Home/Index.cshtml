@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IEnumerable<kdrASPversion.Models.Kdrama>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+<div>
+    <table class="table">
+        <thead>
+        </thead>
+        @foreach (var drama in Model)
+        {
+            <tr>
+                <td>@drama.Title</td>
+                <td>@drama.Summary</td>
+                <td>@drama.DateReleased</td>
+            </tr>
+        }
+    </table>
+
+</div>
